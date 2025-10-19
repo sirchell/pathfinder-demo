@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ChellPathFinder — Demo</title>
+  <style>
+    body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#0f1724; color:#e6eef8; padding:28px; }
+    .card { background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border-radius:10px; padding:18px; max-width:900px; margin:12px auto; box-shadow: 0 6px 18px rgba(2,6,23,0.6); }
+    h1{margin:0 0 6px}
+    p.lead{margin:0 0 14px; color:#a9bfd6}
+    .table{width:100%; border-collapse:collapse; margin-top:10px}
+    .table th, .table td{padding:10px 8px; text-align:left; font-family:monospace; font-size:13px}
+    .status-200{color:#9be6a8; font-weight:700}
+    .status-403{color:#ffd580; font-weight:700}
+    .status-404{color:#ff9ea8; font-weight:700}
+    .note{color:#9fb4d6; font-size:12px}
+    .tags{margin-top:10px}
+    footer{color:#93a6c6; font-size:13px; text-align:center; margin-top:14px}
+    .badge{display:inline-block; padding:4px 8px; border-radius:999px; background:rgba(255,255,255,0.04); margin-right:6px; font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>ChellPathFinder — <span style="color:#9be6a8">Static Demo</span></h1>
+    <p class="lead">Handcrafted wordlist visualization. This demo is static and safe — no network activity. Built to show methodology and judgment as a bug hunter.</p>
+
+    <div class="tags">
+      <span class="badge">Bug Hunting</span>
+      <span class="badge">Recon</span>
+      <span class="badge">Demo</span>
+      <span class="badge">Chell</span>
+    </div>
+
+    <table class="table" aria-hidden="true">
+      <thead>
+        <tr style="color:#9fb4d6">
+          <th>HTTP</th><th>Path</th><th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="status-200">200</td><td>/admin</td><td class="note">Possible admin panel (further manual validation required)</td></tr>
+        <tr><td class="status-403">403</td><td>/.git</td><td class="note">403 — .git present but access blocked (check for leaks)</td></tr>
+        <tr><td class="status-404">404</td><td>/tmp</td><td class="note">Not found</td></tr>
+        <tr><td class="status-200">200</td><td>/api/v1</td><td class="note">API root — inspect endpoints carefully</td></tr>
+        <tr><td class="status-200">200</td><td>/backup.zip</td><td class="note">Sensitive archive — treat as high priority (if present)</td></tr>
+      </tbody>
+    </table>
+
+    <p class="note" style="margin-top:12px">
+      Tip: A human-first approach beats blind automation. Always document findings, record timestamps, and get permission.
+    </p>
+
+    <footer>
+      Demo by <strong>Chell</strong> — handcrafted wordlist. Ethical researcher.
+    </footer>
+  </div>
+</body>
+</html>
