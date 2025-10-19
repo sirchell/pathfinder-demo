@@ -11,8 +11,6 @@
 - `wordlist.txt` — Curated list of common admin, config, backup and public paths (handcrafted).
 - `demo/index.html` — Static demo page that visualizes example scan results (no network requests).
 - `README.md` — This file.
-- `LICENSE` — Recommended: MIT or choose what you prefer.
-
 ---
 
 ## Why this repo
